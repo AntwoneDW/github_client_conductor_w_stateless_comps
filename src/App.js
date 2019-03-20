@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { fetchRepos, getRepoCount, REPOS_PAGE_SIZE } from "./util/githubUtil.js"
+import DataViewer from './DataViewer'
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div className="App">
         <header className="App-header">
@@ -19,10 +20,10 @@ class App extends Component {
           >
             Learn React
           </a>
+          <DataViewer/>
         </header>
       </div>
     );
-  }
 }
 
 export default App;
